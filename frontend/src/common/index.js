@@ -1,6 +1,4 @@
-
-
-const backendDomin = process.env.REACT_APP_BACKEND_URL// "http://localhost:8080"
+const backendDomin = process.env.REACT_APP_BACKEND_URL   //"http://localhost:8080"
 
 const SummaryApi = {
     signUP : {
@@ -8,7 +6,7 @@ const SummaryApi = {
         method : "post"
     },
     signIn : {
-        url : `${backendDomin}/api/signin`,
+       url : `${backendDomin}/api/signin`,
         method : "post"
     },
     current_user : {
@@ -88,6 +86,5 @@ const SummaryApi = {
         method : "get"
     }
 }
-
 
 export default SummaryApi

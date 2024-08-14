@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useContext, useEffect, useState } from 'react'
 import SummaryApi from '../common'
 import Context from '../context'
@@ -40,6 +41,7 @@ const Cart = () => {
         setLoading(true)
         handleLoading()
          setLoading(false)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
 
@@ -138,7 +140,7 @@ const Cart = () => {
     }
 
     const totalQty = data.reduce((previousValue,currentValue)=> previousValue + currentValue.quantity,0)
-    const totalPrice = data.reduce((preve,curr)=> preve + (curr.quantity * curr?.productId?.sellingPrice) ,0)
+    const totalPrice = data.reduce((preve,curr)=> preve + (curr.quantity * curr?.productId?.sellingPrice),0)
   return (
     <div className='container mx-auto'>
         
