@@ -1,4 +1,4 @@
-
+import logo from './logo.svg';
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import SummaryApi from './common';
 import Context from './context';
 import { useDispatch } from 'react-redux';
-import { setUserDetails } from './store/userSlice'
+import { setUserDetails } from './store/userSlice';
 
 function App() {
   const dispatch = useDispatch()
@@ -19,7 +19,7 @@ function App() {
     const dataResponse = await fetch(SummaryApi.current_user.url,{
       method : SummaryApi.current_user.method,
       credentials : 'include'
-    })
+    }) 
 
    const dataApi = await dataResponse.json()
 
